@@ -1,6 +1,5 @@
-# OctaX Security bot 
-# Copyright 2024 OctaX Inc.
-# bot invite url: https://discord.com/api/oauth2/authorize?client_id=1034396298436169760&permissions=19647529872613&scope=bot 
+# Discord Security bot 
+# Copyright 2024 Gaegeumchi.
 import discord
 from dotenv import load_dotenv
 import os
