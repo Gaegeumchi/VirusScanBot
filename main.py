@@ -15,7 +15,7 @@ startemoji = '🔄'
 
 @client.event
 async def on_ready():
-    print('봇이 {0.user}로 로그인했습니다.'.format(client))
+    print('Login {0.user}'.format(client))
 
 @client.event
 async def on_message(message):
@@ -44,7 +44,7 @@ async def on_message(message):
             
             if detected_engines:
                 await message.add_reaction('❌')
-                await message.channel.send(f"⚠️ 바이러스가 {len(detected_engines)}개의 엔진에서 검출되었습니다.")
+                await message.channel.send(f"⚠️ Virus detected in {len(detected_engines)} Engines")
                 result_json = response.json()
                 analysis_id = result_json['data']['id']
                 print(f"Analysis ID: {analysis_id}")
@@ -54,7 +54,7 @@ async def on_message(message):
             else:
                 await message.add_reaction('✅')
                 await message.remove_reaction('🔄', client.user)
-                print('안전한 URL' + user_url)
+                print('Safe URL' + user_url)
                 
 
 
